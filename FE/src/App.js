@@ -1,7 +1,7 @@
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Feedback from './components/Feedback';
+import Login from "./components/Login/Login";
+import Registration from "./components/Registration/Registration"
+import Feedback from './components/Feedback/Feedback';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
               <Route path="" element={"dashboard"} />
               <Route path="/feedback" element={<Feedback />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/registration" element={<Registration />} />
           </Routes>
       </Router>
     </div>
