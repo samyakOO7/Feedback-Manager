@@ -11,5 +11,6 @@ public class AddFeedbackResponse {
     private String id;
     private String comment;
     private String rating;
+    private String userId;
     private Timestamp createdTime;
 }
