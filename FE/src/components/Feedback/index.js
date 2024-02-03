@@ -1,8 +1,10 @@
-import React  from "react";
+import React, { useState }  from "react";
+import RadioGroupRating from "./RadioGroupRating";
 
 const Feedback = () => {
+    const [rating, setRating] = useState(null);
     return(
-        <div>feedback</div>
+        <div><RadioGroupRating value={rating} setValue={setRating} /></div>
     )
 }
 
