@@ -21,9 +21,4 @@ public class Feedback {
     private Integer rating;
     private Long userId;
     private Timestamp createdTime;
-
-    @PrePersist
-    protected void onCreate(){
-        createdTime = Timestamp.from(Instant.now());
-    }
 }

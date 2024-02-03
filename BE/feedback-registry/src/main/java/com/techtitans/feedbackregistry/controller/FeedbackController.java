@@ -22,8 +22,7 @@ public class FeedbackController {
     private ModelMapper modelMapper;
 
     @PostMapping("/feedback")
-    public ResponseEntity<String> addFeedback(@RequestBody FeedbackRequest feedback) {
-        feedbackService.addFeedback(modelMapper.map(feedback, Feedback.class));
-        return new ResponseEntity<>("Feedback Added", HttpStatus.CREATED);
+    public ResponseEntity<Feedback> addFeedback(@RequestBody FeedbackRequest feedback) {
+        return new ResponseEntity<>(feedbackService.addFeedback(modelMapper.map(feedback, Feedback.class)), HttpStatus.CREATED);
     }
 }
