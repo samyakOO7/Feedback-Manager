@@ -1,7 +1,6 @@
 import React from 'react';
 import QRCodeGenerator from './QRCodeGenerator';
-import "./Dashboard.css"
-import { Typography } from '@mui/material';
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const qrCodeData = 'https://google.com';
