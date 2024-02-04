@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SubishaaApplication {
+public class FeedbackRegistry {
 
     public static void main(String[] args) {
-        SpringApplication.run(SubishaaApplication.class, args);
+        SpringApplication.run(FeedbackRegistry.class, args);
     }
 
     @Bean

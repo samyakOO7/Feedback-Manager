@@ -26,7 +26,7 @@ public class SecurityConfig {
         http
                 .cors().configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://subishaaa.com"));
+                    config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://feedbackhub-ui.s3-website-us-east-1.amazonaws.com"));
                     config.setAllowedMethods(Collections.singletonList("*"));
                     config.setAllowCredentials(true);
                     config.setAllowedHeaders(Collections.singletonList("*"));
