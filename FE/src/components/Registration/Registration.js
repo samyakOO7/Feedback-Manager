@@ -30,10 +30,11 @@ export default function SignUp() {
         minHeight: '100vh',
       }}
     >
+        <Container className='sizedbox'>
       <Container component="main" maxWidth="xs">
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 10,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -95,6 +96,7 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
+      </Container>
       </Container>
     </Box>
   );

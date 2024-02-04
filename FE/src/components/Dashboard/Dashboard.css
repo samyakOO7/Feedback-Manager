@@ -6,3 +6,18 @@
     padding: 10px;
     gap: 10px;
 }
+.row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Optionally, add some margin to create space between the charts */
+  .row > div {
+    margin-right: 20px; /* Adjust the value as needed */
+  }
+  .download
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

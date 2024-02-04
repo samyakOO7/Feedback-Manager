@@ -65,6 +65,7 @@ export default function Login() {
   return (
     <>
       {loading && <Loading />}
+     
       <Box
         sx={{
           display: 'flex',
@@ -74,10 +75,11 @@ export default function Login() {
           minHeight: '100vh',
         }}
       >
+         <Container className='sizedbox'>
         <Container component="main" maxWidth="xs">
           <Box
             sx={{
-              marginTop: 8,
+              marginTop: 15,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -132,6 +134,7 @@ export default function Login() {
               </Grid>
             </Box>
           </Box>
+        </Container>
         </Container>
       </Box>
     </>

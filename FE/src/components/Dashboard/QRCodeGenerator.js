@@ -22,10 +22,14 @@ const QRCodeGenerator = ({ data, retailer }) => {
 
   return (
     <>
-      <Typography variant='h4'>{retailer} <Button onClick={downloadQRCode}><FileDownloadOutlinedIcon /></Button></Typography>
+      <Typography variant='h4'>{retailer} 
+    </Typography>
       <div id="qr-code-container">
-        <div id="qr-code"><QRCode  value={data} /></div>
-        
+        <div id="qr-code"><QRCode  value={data} />
+        </div >
+       <div className='download'>
+        <Button onClick={downloadQRCode}><FileDownloadOutlinedIcon style={{marginTop:'10px', fontSize:'30px'}}/></Button>
+        </div>
       </div>
       
     </>

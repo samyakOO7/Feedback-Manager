@@ -1,1 +1,1 @@
-export const API = 'http://localhost:80';
+export const API = 'http://feedbackhub.us-east-1.elasticbeanstalk.com:80';
