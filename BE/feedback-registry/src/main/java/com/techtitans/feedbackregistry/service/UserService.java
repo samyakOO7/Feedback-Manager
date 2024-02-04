@@ -41,4 +41,6 @@ public class UserService {
         var user = userRepository.findById(userId).orElseThrow(() -> new BusinessException("User Not exist with id: " + userId));
         return new UserResponse(user.getId(), user.getOrganisationName(), user.getEmail(), user.getTimeStamp());
     }
+
+
 }
