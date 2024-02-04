@@ -18,8 +18,8 @@ const RatingBarChart = ({ token }) => {
     fetchData();
   }, [token]);
 console.log(data);
-  return (
-    <div style={{ margin: '50px', width: '500px', border: '2px solid #ccc', borderRadius: '10px', padding: '10px' }}>
+  return data.length && (
+    <div style={{ margin: '50px', width: '1000px', border: '2px solid #ccc', borderRadius: '10px', padding: '10px' }}>
       {loading ? (
         <p>Loading...</p>
       ) : (

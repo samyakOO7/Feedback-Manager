@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts';
 import { fetchRatingData } from '../RatingDataCall';
-
+import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 const RatingPieChart = ({ token }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -18,18 +18,17 @@ const RatingPieChart = ({ token }) => {
     fetchData();
   }, [token]);
 
-  return (
-    <div style={{ margin: '50px', width: '500px', border: '2px solid #ccc', borderRadius: '10px', padding: '10px' }}>
+  return data.length && (
+    <div style={{ margin: '50px', width: '700px', border: '2px solid #ccc', borderRadius: '10px', padding: '10px' }}>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <PieChart
-          height={500} width={500}
+        <PieChart 
+          height={500} width={700}
           colors={colors}
           series={[
             {
               arcLabel: (item) => `${item.label} (${item.value})`,
-              arcLabelMinAngle: 45,
               data: data.map((item) => ({
                 value: item.count_of_ratings,
                 color: colors[item.rating - 1],
@@ -37,6 +36,7 @@ const RatingPieChart = ({ token }) => {
               })),
             },
           ]}
+          
           sx={{
             [`& .${pieArcLabelClasses.root}`]: {
               fill: 'white',

@@ -4,6 +4,7 @@ import "./Dashboard.css";
 import { useNavigate } from 'react-router-dom';
 import RatingPieChart from '../RatingPieChart/RatingPieChart';
 import RatingBarChart from '../RatingBarChart/RatingBarChart';
+import TopThreeComments from '../TopThreeComments/TopThreeComments';
 const Dashboard = () => {
   const navigate = useNavigate();
   // token will be used when fetching dashboard data.
@@ -27,6 +28,7 @@ const Dashboard = () => {
     <RatingPieChart token={token}/>
     <RatingBarChart token={token}/>
     </div>
+    <TopThreeComments token={token}/>
     </>
   );
 
